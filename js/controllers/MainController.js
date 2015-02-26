@@ -1,14 +1,23 @@
 var app = angular.module('parseQ');
 
-app.controller('MainController', function($scope){
-	$scope.test = function() {
-		console.log('This is a test!');
-	};
+app.controller('MainController', function($scope, parseService){
 
-	$scope.test();
+	$scope.postData = function() {
+		parseService.postQuestion($scope.yourQuestion).then(function(response){
+			$scope.getParseData();
+			$scope.yourQuestion = "";
+		})
 
+	}
 
+	$scope.getParseData = function() {
+		parseService.getData().then(function(response) {
+			console.log(response);
+			$scope.questions = response.data.results;
+		})
+	}
 
+	$scope.getParseData();
 
 
 
