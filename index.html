@@ -9,16 +9,19 @@
 			<h1>ParseQ App</h1>
 		</header>
 		<form class="top-form">
-			<input class="input-box" ng-model="yourQuestion" placeholder="Question"/>
-				<button ng-click="postData()">Post</button>
+			<input class="input-box" ng-model="yourQuestion" placeholder="Enter your Question"/>
+				<button class="post-button" ng-click="postData()">Post</button>
 		</form>
-
-		<h3><strong>In Queue</strong></h3>
+		<div class="headings">
+			<h3><strong>In Queue</strong></h3>
+		</div>
 		<div class="items" ng-repeat="question in questions | filter: {status: 'red'}"  ng-click="changeStatus(question.objectId)">
 			{{question.question}}
 		</div>
 
-		<h3><strong>Being Helped</strong></h3>
+		<div class="headings">
+			<h3><strong>Being Helped</strong></h3>
+		</div>
 		<div class="items" ng-repeat="question in questions | filter: {status: 'yellow'}">
 			{{question.question}} <button class="done-button" ng-click="deleteQuestion(question.objectId)">Done</button>
 		</div>

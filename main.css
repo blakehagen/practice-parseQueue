@@ -25,11 +25,19 @@ h1 {
 }
 
 .top-form {
-	padding: 20px;
+	padding: 30px 0px 0px 30px;
 }
 
 .input-box {
 	width: 250px;
+	height: 28px;
+	text-align: left;
+	font-family: "Myriad Set Pro", sans-serif;
+	font-size: 18px;
+}
+
+.headings {
+	margin: 10px;
 }
 
 h3 {
@@ -46,6 +54,14 @@ h3 {
 }
 
 .done-button {
+	height: 20px;
+	width: 45px;
+	margin-left: 10px;
+}
+
+.post-button {
+	height: 20px;
+	width: 45px;
 	margin-left: 10px;
 }
 
