@@ -19,12 +19,16 @@ app.controller('MainController', function($scope, parseService){
 	$scope.getParseData();
 
 	$scope.changeStatus = function(objectId) {
-		parseService.updateData(objectId).then(function(response){
+		parseService.updateData(objectId).then(function(response) {
 			$scope.getParseData();
 		})
 	}
 
-
+	$scope.deleteQuestion = function(objectId) {
+		parseService.deleteData(objectId).then(function(response) {
+			$scope.getParseData();
+		})
+	}
 
 
 

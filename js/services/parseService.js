@@ -30,5 +30,17 @@ app.service('parseService', function($http) {
 		});
 	}
 
+	this.deleteData = function(objectId) {
+		return $http({
+			method: 'DELETE',
+			url: 'https://api.parse.com/1/classes/parseQ/' + objectId
+		});
+	}
+
+
+
+
+
+
 
 });

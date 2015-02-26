@@ -18,6 +18,9 @@
 		<h3>Being Helped</h3>
 		<div ng-repeat="question in questions | filter: {status: 'yellow'}">
 			{{question.question}}
+			<form>
+				<button ng-click="deleteQuestion()">Done</button>
+			</form>	
 		</div>
 
 
