@@ -5,22 +5,22 @@
 		<link rel="stylesheet" type="text/css" href="main.css">
 	</head>
 	<body ng-app="parseQ" ng-controller="MainController">
-		<form>
-			<input ng-model="yourQuestion" placeholder="Question"/>
-				<button ng-click="postData()">Post Question</button>
+		<header>
+			<h1>ParseQ App</h1>
+		</header>
+		<form class="top-form">
+			<input class="input-box" ng-model="yourQuestion" placeholder="Question"/>
+				<button ng-click="postData()">Post</button>
 		</form>
 
-		<h3>In Queue</h3>
-		<div ng-repeat="question in questions | filter: {status: 'red'}"  ng-click="changeStatus(question.objectId)">
+		<h3><strong>In Queue</strong></h3>
+		<div class="items" ng-repeat="question in questions | filter: {status: 'red'}"  ng-click="changeStatus(question.objectId)">
 			{{question.question}}
 		</div>
 
-		<h3>Being Helped</h3>
-		<div ng-repeat="question in questions | filter: {status: 'yellow'}">
-			{{question.question}}
-			<form>
-				<button ng-click="deleteQuestion(question.objectId)">Done</button>
-			</form>	
+		<h3><strong>Being Helped</strong></h3>
+		<div class="items" ng-repeat="question in questions | filter: {status: 'yellow'}">
+			{{question.question}} <button class="done-button" ng-click="deleteQuestion(question.objectId)">Done</button>
 		</div>
 
 

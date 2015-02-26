@@ -1,0 +1,54 @@
+/** {
+	border: 1px solid red;
+}*/
+
+html, body {
+	height: 100%;
+	width: 100%;
+	margin: 0;
+}
+
+header {
+	height: 12%;
+	width: 100%;
+	background: #b1b9b7;
+
+}
+
+h1 {
+	font-family: "Myriad Set Pro", sans-serif;
+	color: #FFF;
+	font-size: 40px;
+	text-align: center;
+	vertical-align: center;
+	padding-top: 20px;
+}
+
+.top-form {
+	padding: 20px;
+}
+
+.input-box {
+	width: 250px;
+}
+
+h3 {
+	font-family: "Myriad Set Pro", sans-serif;
+	margin-left: 40px;
+	font-size: 30px;
+}
+
+.items {
+	margin-left: 50px;
+	padding-right: 10px;
+	font-size: 24px;
+	font-family: "Myriad Set Pro", sans-serif;
+}
+
+.done-button {
+	margin-left: 10px;
+}
+
+
+
+
