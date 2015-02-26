@@ -38,9 +38,4 @@ app.service('parseService', function($http) {
 	}
 
 
-
-
-
-
-
 });
