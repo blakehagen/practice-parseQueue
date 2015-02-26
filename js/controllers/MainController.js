@@ -7,7 +7,6 @@ app.controller('MainController', function($scope, parseService){
 			$scope.getParseData();
 			$scope.yourQuestion = "";
 		})
-
 	}
 
 	$scope.getParseData = function() {
@@ -18,6 +17,13 @@ app.controller('MainController', function($scope, parseService){
 	}
 
 	$scope.getParseData();
+
+	$scope.changeStatus = function(objectId) {
+		parseService.updateData(objectId).then(function(response){
+			$scope.getParseData();
+		})
+	}
+
 
 
 
